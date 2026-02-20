@@ -27,11 +27,11 @@ class Pawn < Piece
         moves.append move
       end
     end
-    capture_move = [@position_row + 1, @position_col + 1]
+    capture_move = [@position_row + (1 * move_direction), @position_col + 1]
     if check_capeture_move(capture_move, board)
       moves.append capture_move
     end
-    capture_move = [@position_row + 1, @position_col - 1]
+    capture_move = [@position_row + (1 * move_direction), @position_col - 1]
     if check_capeture_move(capture_move, board)
       moves.append capture_move
     end

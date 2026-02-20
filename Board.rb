@@ -9,7 +9,7 @@ class Board
     self.init_empty_board
     self.setPosition(fen_string)
     self.print_board
-    puts self.check_move("Pb4-b5")
+    puts self.check_move("Pd4-e5") # for testing
   end
 
   def print_board
@@ -63,7 +63,7 @@ class Board
       puts "index invalid"
       return false
     end
-    if start_split[0] != @board[row_index][col_index].to_s.downcase
+    if start_split[0] != @board[row_index][col_index].to_s
       puts "no same piece invalid"
       return false
     end

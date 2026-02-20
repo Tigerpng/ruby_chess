@@ -82,12 +82,12 @@ class TestCheckMove < Minitest::Test
 
   # Gegner vorne links schlagen
   def test_pawn_white_valid_capture_left
-    assert_equal true, @board.check_move("Pd4-c5")
+    assert_equal true, @board.check_move("Pd4-e5")
   end
 
   # Gegner vorne rechts schlagen
   def test_pawn_white_valid_capture_right
-    assert_equal true, @board.check_move("Pd4-e5")
+    assert_equal true, @board.check_move("Pb4-a5")
   end
 
 
@@ -112,12 +112,12 @@ class TestCheckMove < Minitest::Test
 
   # 2 Felder nach vorne obwohl blockiert
   def test_pawn_white_invalid_blocked_2
-    assert_equal false, @board.check_move("Pa2-a4")
+    assert_equal false, @board.check_move("Pf2-f4")
   end
 
   # Gegner vorne links schlagen obwohl keiner da
   def test_pawn_white_invalid_capture_left_empty
-    assert_equal false, @board.check_move("Pb4-a5")
+    assert_equal false, @board.check_move("Pd4-c5")
   end
 
   # Gegner vorne rechts schlagen obwohl keiner da
