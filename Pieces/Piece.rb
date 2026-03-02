@@ -16,7 +16,7 @@ class Piece
   end
 
   def board_index_valid?(indexs)
-    Board.board_index_valid(indexs)
+    Board.board_index_valid?(indexs)
   end
 
   def get_all_moves(board, captures)
