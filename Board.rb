@@ -9,7 +9,7 @@ class Board
     self.init_empty_board
     self.setPosition(fen_string)
     self.print_board
-    puts self.check_move("Pd4-e5") # for testing
+    puts self.check_move("Rf1-e1") # for testing
   end
 
   def print_board
@@ -73,6 +73,7 @@ class Board
     row_index = 8 - end_split[1].to_i
     translated_move_end = [row_index, col_index]
     moves = @board[translated_move_start[0]][translated_move_start[1]].get_all_moves(@board)
+    puts moves
     if moves.include? translated_move_end
       true
     else 
