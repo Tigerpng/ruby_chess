@@ -33,9 +33,9 @@ class Knight < Piece
          return true
     end
     if board[move[0]][move[1]].color == color
-        return true
-    else
         return false
+    else
+        return true
     end
   end
 end
