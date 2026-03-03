@@ -9,7 +9,7 @@ class Board
     self.init_empty_board
     self.setPosition(fen_string)
     self.print_board
-    puts self.check_move("Ng6-f4") # for testing
+    puts self.check_move("Bd3-f1") # for testing
   end
 
   def print_board
